@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './styles.css';
 
 const Header = () => {
-  return <div><h1>X-files Search</h1></div>;
+  return <h1>X-files Search<br /><Link to="/">Home</Link></h1>;
 };
 
 export default Header;

@@ -8,12 +8,12 @@ jest.mock('../../services/details-api.js');
 
 describe('CharacterDetail component', () => {
   it('display a character after a load screen', () => {
-    getDetails.mockResolvedValue({
+    getDetails.mockResolvedValue([{
       name: 'mulder',
       image: 'www.google.com',
       status: 'alive',
       description: 'some guy that works somewhere'
-    });
+    }]);
 
     render(<MemoryRouter initialEntries={['/details/1']}>
       <Route path="/details/:id" component={CharacterDetail}/>
@@ -23,8 +23,8 @@ describe('CharacterDetail component', () => {
 
     return waitFor(() => {
       screen.getByText('mulder');
-      screen.getByText('alive');
-      screen.getByText('some guy that works somewhere');
+      screen.getByText('Status: alive');
+      screen.getByText('Description: some guy that works somewhere');
       screen.getByAltText('mulder');
     });
   });

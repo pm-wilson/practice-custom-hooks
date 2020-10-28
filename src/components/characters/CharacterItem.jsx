@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './styles.css';
 
 const CharacterItem = ({ name, image, }) => (
-  <div>
-    <h3>{name}</h3>
+  <div className={styles.nameselect}>
+    <h3 className={styles.nametag}>{name}</h3>
     <img src={image} alt={name}></img>
   </div>
 );

@@ -11,8 +11,8 @@ import Header from '../../pages/Header';
 export default function App() {
   return (
     <div>
-      <Header />
       <Router>
+        <Header />
         <Switch>
           <Route
             path="/"

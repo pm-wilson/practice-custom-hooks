@@ -7,8 +7,8 @@ const CharacterDetail = () => {
   const { loading, character, error } = useCharactersByName(name);
 
   
-  if(loading) return <h1>Loading...</h1>;
-  if(error) return <h3>Error, unable to get data</h3>;
+  if(loading) return <h2>Loading...</h2>;
+  if(error) return <h2>Error, unable to get data</h2>;
 
   const characterInfo = character[0];
   
